@@ -15,14 +15,14 @@
 </head>
 <body>
 <p>
-    id : ${ colis.getId() } <br>
+    <label class="text text-4" > id : ${ colis.getId() } </label>  <br>
     Poids : ${ colis.getPoids() } <br>
     Valeur : ${ colis.getValeur() } <br>
     Origine : ${ colis.getOrigine() } <br>
     Destination : ${ colis.getDestination() } <br>
     Date : value="${ colis.date }" <br>
 </p>
-<a href="index.jsp"  >Revenir à la page d'accueil</a>
+<a class="text text-4" href="index.jsp"  >Revenir à la page d'accueil</a>
 
 </body>
 </html>

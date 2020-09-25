@@ -15,23 +15,22 @@
 </head>
 <body>
 <body>
-<table>
-    <tr><th>Id</th><th>Poids</th><th>Valeur</th><th>Origine</th></tr>
+<table class="text">
+    <tr><th class="text text-2">Id</th><th class="text text-2">Poids</th><th class="text text-2">Valeur</th><th class="text text-2">Origine</th></tr>
     <% for (Colis colis:(List<Colis>) request.getAttribute("colis")
             ) {
     %>
         <tr>
-            <td>${ colis.id }</td>
-            <td>${ colis.poids }</td>
-            <td>${ colis.valeur }</td>
-            <td>${ colis.origine }</td>
-            <td>${ colis.dateMesure }</td>
+            <td class="text text-4">${ colis.id }</td>
+            <td class="text text-4">${ colis.poids }</td>
+            <td class="text text-4">${ colis.valeur }</td>
+            <td class="text text-4">${ colis.origine }</td>
         </tr>
         <%
             }
         %>
 </table>
-<a href="index.jsp"  >Revenir à la page d'accueil</a>
+<a class="text text-4" href="index.jsp"  >Revenir à la page d'accueil</a>
 </body>
 
 </body>
