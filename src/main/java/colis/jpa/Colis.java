@@ -33,11 +33,13 @@ public class Colis implements Serializable {
      * Origine du colis
      */
     private String origine;
+
+    private String destination;
     /**
      * Date a laquelle la mesure a ete faite.
      */
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateMesure;
+    private Date dateColis;
 
 
     /**
@@ -53,11 +55,12 @@ public class Colis implements Serializable {
      * @param valeur valeur d'un colis
      * @param origine origine du colis
      */
-    public Colis(float poids, float valeur,String origine) {
+    public Colis(float poids, float valeur,String origine,String destination) {
         this.poids = poids;
         this.valeur = valeur;
         this.origine = origine;
-        this.dateMesure =new Date();
+        this.destination = destination;
+        this.dateColis =new Date();
     }
 
     public long getId() {
@@ -87,10 +90,17 @@ public class Colis implements Serializable {
     public void setOrigine(String origine) {
         this.origine = origine;
     }
-    public Date getDateMesure() {
-        return dateMesure;
+    public Date getDateColis() {
+        return dateColis;
     }
-    public void setDateMesure(Date dateMesure) {
-        this.dateMesure = dateMesure;
+    public void setDateColis(Date dateMesure) {
+        this.dateColis = dateMesure;
+    }
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 }
