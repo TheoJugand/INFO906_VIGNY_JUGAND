@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Affichage Colis</title>
+    <link href="index.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <p>

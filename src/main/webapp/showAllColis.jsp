@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Liste des colis</title>
+    <link href="index.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <body>
