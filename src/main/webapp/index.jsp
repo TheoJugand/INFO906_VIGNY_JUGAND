@@ -25,12 +25,17 @@
         <input type="text" name="destination" id="destination" value="${param.destination }" ><br>
         <input class="submit" type="submit" name="Valider"  value="OK">
     </form>
+    <br>
     <h2 class="text text-3">Affichage d'un colis :</h2>
+    <br>
     <form method="get" action="ShowColisByIDServlet">
         <label class="text text-4" for="Afficher">Afficher un colis : </label> <input name="id"  type="number">
         <input class="submit" type="submit" name="Afficher"  value="Afficher" id="Afficher">
     </form>
-    <form method="get" action="ShowColisByIDServlet">
+    <br>
+    <h2 class="text text-3">Gestion des étapes :</h2>
+    <br>
+    <form method="get" action="AddEtapeServlet">
         <label class="text text-4" for="Modifier"> Ajouter une étape : </label> <input name="id"  type="number">
         <input class="submit" type="submit" name="Modifier"  value="Modifier" id="Modifier">
     </form>

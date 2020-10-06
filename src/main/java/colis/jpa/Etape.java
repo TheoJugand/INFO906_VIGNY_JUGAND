@@ -21,12 +21,12 @@ public class Etape implements Serializable  {
 
     public Etape(){}
 
-    public Etape(double latitude, double longitude, String emplacement, String etat, Date dateEtape, Colis colis) {
+    public Etape(double latitude, double longitude, String emplacement, String etat, Colis colis) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.emplacement = emplacement;
         this.etat = etat;
-        this.dateEtape = dateEtape;
+        this.dateEtape = new Date();
         this.colis = colis;
     }
 

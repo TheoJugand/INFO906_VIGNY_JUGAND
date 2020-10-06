@@ -1,6 +1,7 @@
 package colis.ejb;
 
 import colis.jpa.Colis;
+import colis.jpa.Etape;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -25,6 +26,12 @@ public class ColisEJB {
         entityManager.persist(colis);
         return colis;
     }
+
+    public Colis addEtapeColis(Colis colis, Etape etape){
+
+        return colis;
+    }
+
     public Colis findColis(long id){
         return entityManager.find(Colis.class,id);
     }
