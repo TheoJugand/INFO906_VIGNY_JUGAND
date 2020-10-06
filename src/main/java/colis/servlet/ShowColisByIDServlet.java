@@ -12,26 +12,27 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/ShowAllColisServlet")
-public class ShowAllColisServlet extends HttpServlet {
+@WebServlet("/ShowColisByIDServlet")
+public class ShowColisByIDServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @EJB
     private ColisEJB colisEJB;
 
-    public ShowAllColisServlet(){
+    public ShowColisByIDServlet(){
         super();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // recuperation et parsing des parametres de la requete
         String piece = request.getParameter("piece");
+        long id = Long.parseLong(request.getParameter("id"));
         // appel de l'ejb
-        List<Colis> list = colisEJB.findAllColis();
-        // ajout de la liste de mesures dans la requete
-        request.setAttribute("colis",list);
+        Colis colis = colisEJB.findColis(id);
+        // ajout de la mesure dans la requete
+        request.setAttribute("colis",colis);
         // transfert a la JSP d'affichage
-        request.getRequestDispatcher("/showAllColis.jsp").forward(request, response);
+        request.getRequestDispatcher("/showColisByID.jsp").forward(request, response);
     }
 
 

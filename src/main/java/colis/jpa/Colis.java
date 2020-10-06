@@ -54,6 +54,7 @@ public class Colis implements Serializable {
      * @param poids piece ou a ete faite la mesure
      * @param valeur valeur d'un colis
      * @param origine origine du colis
+     * @param destination destination du colis
      */
     public Colis(float poids, float valeur,String origine,String destination) {
         this.poids = poids;
@@ -90,12 +91,15 @@ public class Colis implements Serializable {
     public void setOrigine(String origine) {
         this.origine = origine;
     }
+
     public Date getDateColis() {
         return dateColis;
     }
+
     public void setDateColis(Date dateMesure) {
         this.dateColis = dateMesure;
     }
+
     public String getDestination() {
         return destination;
     }

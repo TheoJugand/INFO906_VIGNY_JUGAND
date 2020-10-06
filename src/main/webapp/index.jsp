@@ -9,19 +9,27 @@
 <html>
 <head>
     <title>TP INFO906</title>
+    <link href="index.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
-    <h1>Accueil</h1>
-    <h2>Ajouter une mesure : </h2>
-    <form method="get" action="AddColisServlet">
-        Poids : <input name="poids"  type="text"><br>
-        Valeur : <input name="valeur"  type="text"><br>
-        Origine : <input name="origine"  type="text" value="${param.origine }" >
-        <input type="submit" name="Valider"  value="OK">
+    <h1 class="text text-1">Accueil</h1> <br>
+    <h2 class="text text-2">Ajouter un colis : </h2>
+    <form class="form" method="get" action="AddColisServlet">
+        <label class="text text-4" for="poids">Poids : </label>
+        <input type="text" name="poids" id="poids" ><br>
+        <label class="text text-4" for="valeur">Valeur : </label>
+        <input type="text" name="valeur" id="valeur" ><br>
+        <label class="text text-4" for="origine">Origine : </label>
+        <input type="text" name="origine" id="origine" value="${param.origine }"><br>
+        <label class="text text-4" for="destination">Destination : </label>
+        <input type="text" name="destination" id="destination" value="${param.destination }" ><br>
+        <input class="submit" type="submit" name="Valider"  value="OK">
     </form>
-    <h2>Affichage des mesures :</h2>
-    <form method="get" action="ShowAllColisServlet">
-        Afficher tous les colis : <input type="submit" name="Afficher"  value="Afficher">
+    <h2 class="text text-3">Affichage d'un colis :</h2>
+    <form method="get" action="ShowColisByIDServlet">
+        <label class="text text-4" for="Afficher">Afficher un colis : </label> <input name="id"  type="number">
+        <input class="submit" type="submit" name="Afficher"  value="Afficher" id="Afficher">
     </form>
 </body>
+</html>
 </html>
