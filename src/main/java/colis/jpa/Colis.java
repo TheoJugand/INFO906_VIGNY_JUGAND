@@ -1,12 +1,10 @@
 package colis.jpa;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 /**
  * Representation d'un colis.
@@ -41,12 +39,10 @@ public class Colis implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateColis;
 
+    @OneToMany(targetEntity=Etape.class, mappedBy = "colis", fetch = FetchType.EAGER)
+    private List<Etape> etapeArrayList;
 
-    /**
-     * Constructeur sans parametre obligatoire.
-     */
-    public Colis() {
-    }
+
 
     /**
      * Contructeur permetant de creer une nouvelle mesure.
@@ -62,6 +58,11 @@ public class Colis implements Serializable {
         this.origine = origine;
         this.destination = destination;
         this.dateColis =new Date();
+        this.etapeArrayList = new ArrayList<>();
+    }
+
+    public Colis() {
+
     }
 
     public long getId() {
