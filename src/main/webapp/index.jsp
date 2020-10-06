@@ -30,6 +30,10 @@
         <label class="text text-4" for="Afficher">Afficher un colis : </label> <input name="id"  type="number">
         <input class="submit" type="submit" name="Afficher"  value="Afficher" id="Afficher">
     </form>
+    <form method="get" action="ShowColisByIDServlet">
+        <label class="text text-4" for="Modifier"> Ajouter une étape : </label> <input name="id"  type="number">
+        <input class="submit" type="submit" name="Modifier"  value="Modifier" id="Modifier">
+    </form>
 </body>
 </html>
 </html>
