@@ -9,31 +9,81 @@
 <html>
 <head>
     <title>TP INFO906</title>
-    <link href="index.css" rel="stylesheet" type="text/css" >
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+<header>
+    <h1 class="text-1">Gestion colis</h1>
+</header>
 <body>
-    <h1 class="text text-1">Accueil</h1> <br>
-    <h2 class="text text-2">Ajouter un colis : </h2>
-    <form class="form" method="get" action="AddColisServlet">
-        <label class="text text-4" for="poids">Poids : </label>
-        <input type="text" name="poids" id="poids" ><br>
-        <label class="text text-4" for="valeur">Valeur : </label>
-        <input type="text" name="valeur" id="valeur" ><br>
-        <label class="text text-4" for="origine">Origine : </label>
-        <input type="text" name="origine" id="origine" value="${param.origine }"><br>
-        <label class="text text-4" for="destination">Destination : </label>
-        <input type="text" name="destination" id="destination" value="${param.destination }" ><br>
-        <input class="submit" type="submit" name="Valider"  value="OK">
-    </form>
-    <h2 class="text text-3">Affichage d'un colis :</h2>
-    <form method="get" action="ShowColisByIDServlet">
-        <label class="text text-4" for="Afficher">Afficher un colis : </label> <input name="id"  type="number">
-        <input class="submit" type="submit" name="Afficher"  value="Afficher" id="Afficher">
-    </form>
-    <form method="get" action="ShowColisByIDServlet">
-        <label class="text text-4" for="Modifier"> Ajouter une étape : </label> <input name="id"  type="number">
-        <input class="submit" type="submit" name="Modifier"  value="Modifier" id="Modifier">
-    </form>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-2">Ajouter un colis : </h2>
+        </div>
+        <div class="container">
+            <form class="form" method="get" action="AddColisServlet">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Poids</span>
+                    </div>
+                    <input type="text" class="form-control" value="${param.poids }" name="poids" id="poids"
+                           placeholder="Poids" aria-label="Poids" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2">Valeur</span>
+                    </div>
+                    <input type="text" class="form-control" value="${param.valeur }" name="valeur" id="valeur"
+                           placeholder="Valeur" aria-label="Valeur" aria-describedby="basic-addon2">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">Origine</span>
+                    </div>
+                    <input type="text" class="form-control" value="${param.origine }" name="origine" id="origine"
+                           placeholder="Origine" aria-label="Origine" aria-describedby="basic-addon3">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon4">Destination</span>
+                    </div>
+                    <input type="text" class="form-control" value="${param.destination }" name="destination"
+                           id="destination"
+                           placeholder="Destination" aria-label="Destination" aria-describedby="basic-addon4">
+                </div>
+                <input class="btn btn-primary float-right" type="submit" name="Valider" value="Ajouter un colis">
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-2">Afficher un colis : </h2>
+        </div>
+        <div class="container">
+            <form method="get" action="ShowColisByIDServlet">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon5">ID</span>
+                    </div>
+                    <input type="text" class="form-control" value="${param.id }" name="id"
+                           id="id"
+                           placeholder="ID" aria-label="ID" aria-describedby="basic-addon5">
+                </div>
+                <input class="btn btn-primary float-right" type="submit" name="Afficher" value="Afficher">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
-</html>
 </html>

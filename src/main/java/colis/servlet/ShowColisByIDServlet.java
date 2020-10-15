@@ -25,8 +25,10 @@ public class ShowColisByIDServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // recuperation et parsing des parametres de la requete
-        String piece = request.getParameter("piece");
-        long id = Long.parseLong(request.getParameter("id"));
+        long id = 0;
+        if(!request.getParameter("id").isEmpty()) {
+            id = Long.parseLong(request.getParameter("id"));
+        }
         // appel de l'ejb
         Colis colis = colisEJB.findColis(id);
         // ajout de la mesure dans la requete

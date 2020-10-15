@@ -10,6 +10,15 @@ public class Etape implements Serializable  {
     private double latitude;
     private double longitude;
     private String emplacement;
+
+    public Date getDateEtape() {
+        return dateEtape;
+    }
+
+    public void setDateEtape(Date dateEtape) {
+        this.dateEtape = dateEtape;
+    }
+
     private String etat;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateEtape;

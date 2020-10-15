@@ -108,4 +108,14 @@ public class Colis implements Serializable {
     public void setDestination(String destination) {
         this.destination = destination;
     }
+
+    public List<Etape> getEtapeArrayList() {
+        return etapeArrayList;
+    }
+
+    public void setEtapeArrayList(List<Etape> etapeArrayList) {
+        this.etapeArrayList = etapeArrayList;
+    }
+
+    public void addEtape(Etape etape){this.etapeArrayList.add(etape);}
 }

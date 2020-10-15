@@ -18,20 +18,31 @@ public class AddColisServlet extends HttpServlet {
     @EJB
     private ColisEJB colisEJB;
 
-    public AddColisServlet(){
+    public AddColisServlet() {
         super();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // recuperation et parsing des parametres de la requete
-        float poids = Float.parseFloat(request.getParameter("poids"));
-        float valeur = Float.parseFloat(request.getParameter("valeur"));
+        float poids = 0.0f;
+        if (!request.getParameter("poids").isEmpty()) {
+            poids = Float.parseFloat(request.getParameter("poids"));
+        }
+        float valeur = 0.0f;
+        if (!request.getParameter("valeur").isEmpty()) {
+            valeur = Float.parseFloat(request.getParameter("valeur"));
+        }
         String origine = request.getParameter("origine");
         String destination = request.getParameter("destination");
         // appel de la methode d'ajout sur l'ejb
-        Colis colis = colisEJB.addColis(poids, valeur,origine,destination);
+        Colis colis = colisEJB.addColis(poids, valeur, origine, destination);
         // ajout de la mesure dans la requete
-        request.setAttribute("colis",colis);
+        request.setAttribute("colis", colis);
         // transfert a la JSP d'affichage
         request.getRequestDispatcher("/showColis.jsp").forward(request, response);
-    }}
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+}

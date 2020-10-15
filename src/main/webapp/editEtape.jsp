@@ -1,14 +1,11 @@
-<%@ page import="colis.jpa.Colis" %>
-<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Maxime
-  Date: 06/10/2020
-  Time: 19:38
+  User: theos
+  Date: 15/10/2020
+  Time: 14:12
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-15"
-         pageEncoding="ISO-8859-15" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
@@ -16,55 +13,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+<body>
 <header>
     <h1 class="text-1">Gestion colis</h1>
 </header>
-<body>
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h2 class="text-2">Ajouter une étape : </h2>
+            <h2 class="text-2">Modifier une Ã©tape : </h2>
         </div>
         <div class="container">
-            <form class="form" method="post" action="AddEtapeServlet">
-                <input type="hidden" value="${id}" name="id">
+            <form class="form" method="post" action="EditEtapeServlet">
+                <input type="hidden" value="${idEtape}" name="idEtape">
+                <input type="hidden" value="${idColis}" name="id">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Latitude</span>
                     </div>
-                    <input type="text" class="form-control" value="${param.latitude }" name="latitude" id="latitude"
-                           placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" value="${etape.latitude}" name="latitude" id="latitude"
+                           placeholder="${etape.latitude}" aria-label="Latitude" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon2">Longitude</span>
                     </div>
-                    <input type="text" class="form-control" value="${param.longitude }" name="longitude" id="longitude"
-                           placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control" value="${etape.longitude }" name="longitude" id="longitude"
+                           placeholder="${etape.longitude}" aria-label="Longitude" aria-describedby="basic-addon2">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon3">Emplacement</span>
                     </div>
-                    <input type="text" class="form-control" value="${param.emplacement }" name="emplacement"
+                    <input type="text" class="form-control" value="${etape.emplacement }" name="emplacement"
                            id="emplacement"
-                           placeholder="Emplacement" aria-label="Emplacement" aria-describedby="basic-addon3">
+                           placeholder="${etape.emplacement}" aria-label="Emplacement" aria-describedby="basic-addon3">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon4">Etat</span>
                     </div>
-                    <input type="text" class="form-control" value="${param.etat }" name="etat"
+                    <input type="text" class="form-control" value="${etape.etat }" name="etat"
                            id="etat"
-                           placeholder="Etat" aria-label="Etat" aria-describedby="basic-addon4">
+                           placeholder="${etape.etat}" aria-label="Etat" aria-describedby="basic-addon4">
                 </div>
-                <input class="btn btn-primary float-right" type="submit" name="Valider" value="Ajouter une étape">
+                <input class="btn btn-primary float-right" type="submit" name="Valider" value="Modifier une Ã©tape">
             </form>
         </div>
     </div>
 </div>
 </body>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
