@@ -14,7 +14,7 @@ public class Etape implements Serializable  {
     public Date getDateEtape() {
         return dateEtape;
     }
-
+    
     public void setDateEtape(Date dateEtape) {
         this.dateEtape = dateEtape;
     }
