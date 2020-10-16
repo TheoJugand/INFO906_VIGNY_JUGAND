@@ -53,23 +53,23 @@ Afin de manipuler les colis, des servlet ont été mis en place pour faire les o
 
 ### Servlets :
 
-[src/main/java/colis/servlet/AddColisServlet.java](src/main/java/colis/servlet/AddColisServlet.java)  ajout d'un colis.
-[src/main/java/colis/servlet/AddEtapeServlet.java](src/main/java/colis/servlet/AddEtapeServlet.java) ajout d'une étape.
-[src/main/java/colis/servlet/EditEtapeServlet.java](src/main/java/colis/servlet/EditEtapeServlet.java) modification d'une étape.
-[src/main/java/colis/servlet/ShowColisServlet.java](src/main/java/colis/servlet/ShowColisServlet.java) affichage d'un colis à sa création.
-[src/main/java/colis/servlet/ShowColisByIDServlet.java](src/main/java/colis/servlet/ShowColisByIDServlet.java) affichage d'un colis à partir de son id.
+[src/main/java/colis/servlet/AddColisServlet.java](src/main/java/colis/servlet/AddColisServlet.java)  ajout d'un colis.    
+[src/main/java/colis/servlet/AddEtapeServlet.java](src/main/java/colis/servlet/AddEtapeServlet.java) ajout d'une étape.    
+[src/main/java/colis/servlet/EditEtapeServlet.java](src/main/java/colis/servlet/EditEtapeServlet.java) modification d'une étape.    
+[src/main/java/colis/servlet/ShowColisServlet.java](src/main/java/colis/servlet/ShowColisServlet.java) affichage d'un colis à sa création.    
+[src/main/java/colis/servlet/ShowColisByIDServlet.java](src/main/java/colis/servlet/ShowColisByIDServlet.java) affichage d'un colis à partir de son id.    
 
 ### JSP :
 
-[src/main/webapp/index.jsp](src/main/webapp/index.jsp)  page d'accueil.
-[src/main/webapp/addEtape.jsp](src/main/webapp/addEtape.jsp) affichage de l'ajout d'une étape.
-[src/main/webapp/editEtape.jsp](src/main/webapp/editEtape.jsp) affichage de la modification d'une étape.
-[src/main/webapp/showColis.jsp](src/main/webapp/showColis.jsp) affichage d'un colis à sa création.
-[src/main/webapp/showColisByID.jsp](src/main/webapp/showColisByID.jsp) affichage d'un colis à partir de son id.
+[src/main/webapp/index.jsp](src/main/webapp/index.jsp)  page d'accueil.    
+[src/main/webapp/addEtape.jsp](src/main/webapp/addEtape.jsp) affichage de l'ajout d'une étape.    
+[src/main/webapp/editEtape.jsp](src/main/webapp/editEtape.jsp) affichage de la modification d'une étape.    
+[src/main/webapp/showColis.jsp](src/main/webapp/showColis.jsp) affichage d'un colis à sa création.    
+[src/main/webapp/showColisByID.jsp](src/main/webapp/showColisByID.jsp) affichage d'un colis à partir de son id.   
 
 ### CSS :
 
-[src/main/webapp/index.css](src/main/webapp/index.css).
+[src/main/webapp/index.css](src/main/webapp/index.css).    
 
 ## Fonctionnement du projet
 
