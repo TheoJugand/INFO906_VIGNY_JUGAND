@@ -78,20 +78,16 @@ Pour utiliser l'appplication, il suffit de cloner le projet git ou de le téléc
 Voici la configuration que nous avons uitliser pour le serveur Jboss :
 
 ![config](/images/Screen1.png)
-Format: ![Alt Text](/images/Screen1.png)
-
 
 Lorsque le client web est déployé, on obtient la page suivante : 
 
 ![accueil](/images/Capture1.png)
-Format: ![Alt Text](/images/Capture1.png)
  
 On peut ajouter un colis en retrant les champs poids, valeur, origine et destination, et visualiser les colis en insérant leurs id (le 1er colis ajouté aura 1 comme valeur).
 
 Lors de l'affichage d'un colis, on peut lui étiqueter des étapes ou alors les modifier.
 
 ![listeColis](/images/Capture3.png)
-Format: ![Alt Text](/images/Capture3.png)
 
 ## Ressources
 
