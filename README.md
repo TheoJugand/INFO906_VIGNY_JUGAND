@@ -36,9 +36,9 @@ L'organisation du projet est répartis en 3 parties disctinctes.
 
 L'application possède 2 objets persistant JPA (Java Persistence API). Un pour la gestion des colis et un autre pour la gestion des étapes qui son défini  respectivement par la classe Colis et la classe Etape :
 
-[src/main/java/colis/jpa/Colis.java](src/main/java/colis/jpa/Colis.java) (implantation de l'entité Etape (entité JPA)).
-[src/main/java/colis/jpa/Etape.java](src/main/java/colis/jpa/Etape.java) (implantation de l'entité Etape (entité JPA)).
-[src/main/resources/META-INF/persistence.xml](src/main/resources/META-INF/persistence.xml) (descripteur standard JPA).
+[src/main/java/colis/jpa/Colis.java](src/main/java/colis/jpa/Colis.java) implantation de l'entité Etape (entité JPA).   
+[src/main/java/colis/jpa/Etape.java](src/main/java/colis/jpa/Etape.java) (implantation de l'entité Etape (entité JPA).  
+[src/main/resources/META-INF/persistence.xml](src/main/resources/META-INF/persistence.xml) descripteur standard JPA.   
 
 ## Partie EJB
 
