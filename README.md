@@ -3,12 +3,12 @@
 # Cette application permet de gérer des colis et de suivre leur acheminement
 
 
-Chaque colis est caractérisé par :
-	- un id (identifiant unique autogénéré)
-	- un poid (le poid du colis)
-	- une valeur
-	- une origine (le lieu de départ)
-	- une destination (la destination du colis)
+Chaque colis est caractérisé par :  
+	* - un id (identifiant unique autogénéré)
+	* - un poid (le poid du colis)
+	* - une valeur
+	* - une origine (le lieu de départ)
+	* - une destination (la destination du colis)
 
 Chaque colis possède un suivi afin de suivre leurs positions tout au long de leurs acheminements. Chaque suivi sont caractérisés par des étapes définies par :
 	- une latitude
